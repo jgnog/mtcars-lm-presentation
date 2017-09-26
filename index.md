@@ -39,12 +39,12 @@ selects and builds a model using the best combination of features.
 The process of feature selection goes like this:
 
 1. Build 10 simple linear regression models (one for each predictor) and
-select the one that produces the lowest $R^2$ score.
+select the one that produces the highest $R^2$ score.
 
 2. If the number of predictors to be included is greater than 1, build
 9 multiple regression models with the predictor selected in the first
 step as the first predictor and one of the other predictors as second
-regressor. Select the model that produces the lowest $R^2$ score.
+regressor. Select the model that produces the highest $R^2$ score.
 
 3. Keep repeating step 2 until the number of predictors in the model
 is equal to the number requested by the user.
